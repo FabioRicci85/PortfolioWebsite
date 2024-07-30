@@ -1,0 +1,1874 @@
+                            /* --- Kleuren --- */
+
+:root{
+    --bg-color: #15181f;
+    --dark: #091b2a;
+    --off-white: #ebecef;
+    --light-blue:#02ecff;
+    --medium-blue: #00a7eb;
+    --dark-petrol: #0f2c44;
+    --grey: #3d3d3d;
+    --light-blue-shadow: rgba(2, 236, 255, 0.45)
+}
+
+            /*--- Algemene opmaak voor alle pagina's ---'*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--off-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 20;
+}
+body::before {
+    content: '';
+    background-image: url('Media/Background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    pointer-events: none;
+}
+            /* --- Algemene navigatie balk voor alle pagina's --- */
+
+.nav__container {
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 1% 0 0 0;
+    right: 0;
+    z-index: 100;
+    /*background-color: red;*/
+}
+.nav__container .logo img{
+    padding: 0 2rem;
+    max-width: 20rem;
+}
+.nav__container .logo a {
+    color: var(--off-white);
+}
+.nav__container ul {
+    display: flex;
+    list-style: none;
+    padding: 0 3em;
+}
+.nav__container ul li {
+    cursor: pointer;
+    padding: 10px 5px;
+    position: relative;
+}
+.nav__container ul li a {
+    color: var(--off-white);
+    transition: all 0.3s;
+    padding: 10px;
+    border-radius: 10px;
+}
+.nav__container ul li a:hover {
+    transform: translateY(-10px);
+    color: var(--dark-petrol);
+    background-color: var(--medium-blue);
+
+}
+.div__menu{
+    display: none;
+}
+.nav__container ul li:hover .div__menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 4.2rem;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 1px 1px 30px var(--light-blue);
+}
+.div__menu ul {
+    display: block;
+    margin: 10px -80px 10px -80px;
+}
+.div__menu ul li a {
+    display: block;
+}
+
+                        /* --- Index pagina CSS --- */
+
+main {
+    min-height: 100vh;
+    flex-grow: 1;
+}
+.section__container{
+    margin: 8% auto;
+    max-width: 117rem;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    justify-content: space-between;
+
+
+    /*border: 2px solid yellowgreen;*/
+}
+.div__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+    line-height: 1.3;
+    padding: 2rem;
+    border-radius: 20px;
+    background: var(--bg-color);
+    box-shadow: -5px -5px 20px var(--light-blue-shadow), 5px 5px 20px var(--dark-petrol);
+}
+.div__content h1 {
+    /*position: relative;*/
+    font-size: 4.75rem;
+    font-weight: 700;
+}
+.div__content::before {
+    content: '';
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    width: 50rem;
+    height: 95%;
+    background: var(--bg-color);
+    animation: showRight 1s ease-in-out forwards ;
+    animation-delay: 0.5s;
+    border-radius: 20px;
+}
+.div__content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--light-blue);
+}
+.div__content h3 {
+    font-size: 2.5rem;
+    padding-bottom: 0.5em;
+}
+.div__quote {
+    font-size: 2rem;
+    font-weight: 400;
+}
+.p__credit {
+    font-size: 20px;
+}
+.a__logo1 .fa-linkedin {
+    color: var(--light-blue);
+    font-size: 60px;
+    position: absolute;
+    left: 45.2rem;
+    top: 22.5rem;
+}
+.section__container img {
+    display: flex;
+    width: 33rem;
+    border-radius: 50%;
+    margin-right: 5rem;
+    transform: scale(1.1);
+}
+.section__container img:hover{
+    box-shadow: 5px 10px 60px var(--light-blue);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+                       /*--- About Me CSS ---*/
+
+.main__about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.sct__intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    margin: 5% auto;
+    align-items: center;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.sct__intro h1 {
+    font-size: 4em;
+}
+.sct__intro p {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sct__intro img {
+    width: 40rem;
+    border-radius: 5%;
+    border: 4px solid var(--light-blue);
+    box-shadow: -5px -5px 20px var(--light-blue-shadow), 5px 5px 20px var(--dark-petrol);
+}
+.sct__art {
+    display: flex;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 2% 0;
+    border-radius: 10px;
+    box-shadow: -5px -5px 20px var(--light-blue-shadow), 5px 5px 20px var(--dark-petrol);
+
+    /*border: 2px solid yellowgreen;*/
+}
+.sct__art .art__backstory {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60vw;
+    margin: 1% auto;
+    align-items: center;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.art__backstory .h1__title{
+    padding: 0 3em;
+    font-size: 3em;
+}
+.art__backstory p {
+    font-size: 1.7em;
+}
+.art__backstory img {
+    width: 60vw;
+    margin: -8% 0;
+    opacity: 0.7;
+}
+.sct__interesse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    margin: 5% auto;
+    align-items: center;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.sct__interesse h1 {
+    font-size: 3em;
+}
+.sct__interesse ul {
+    list-style: none;
+    display: flex;
+    flex-flow: wrap column;
+    height: 19rem;
+}
+.sct__interesse ul li {
+    font-size: 1.6em;
+    padding: 0.7em;
+}
+.sct__interesse ul li i {
+    padding-right: 0.7em;
+}
+
+                        /* --- Curriculum CSS --- */
+
+                            /* --- Header --- */
+.curriculum__header {
+    display: flex;
+    flex-direction: column;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.sct__info {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    max-height: 42rem;
+    border: 1px solid var(--light-blue);
+    border-radius: 30px;
+    left: 1rem;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.sct__info h1 {
+    font-size: 2rem;
+    margin-top: -8%;
+}
+.sct__info h2 {
+    font-size: 1.5rem;
+    color: var(--light-blue);
+    /*padding-bottom: 9%;*/
+}
+.div__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.div__contact ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.div__contact ul li {
+    padding: 0 1em;
+    font-size: 1.5rem;
+    /*margin: 0.5em 0 0 0;*/
+}
+
+.curriculum__header img {
+    border-radius: 50%;
+    width: 16rem;
+    margin: 1rem 0;
+
+}
+.curriculum__header img:hover{
+    box-shadow: 5px 10px 60px var(--light-blue);
+    transition: box-shadow 0.3s ease-in-out;
+
+}
+.curriculum__header img:active {
+    box-shadow: none;
+    border: 10px solid var(--off-white);
+}
+.div__contact a {
+    color: var(--off-white);
+    font-size: 1.5em;
+}
+.div__contact h3 {
+    font-size: 1.5em;
+}
+.div__contact p {
+    margin: 4% 0 3% 0;
+}
+.fa-linkedin, .fa-github, .fa-instagram {
+    color: var(--light-blue);
+
+}
+.fa-linkedin:hover, .fa-instagram:hover {
+    box-shadow: 1px 1px 20px var(--light-blue);
+    border-radius: 20%;
+
+}
+.fa-github:hover{
+    box-shadow: 1px 1px 20px var(--light-blue);
+    border-radius: 50%;
+
+}
+.div__hire {
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    padding: 0.5em 3em;
+    border-radius: 40px;
+    background-color: var(--medium-blue);
+}
+.div__hire:hover {
+    background-color: var(--bg-color);
+    border: 1px solid var(--light-blue);
+    box-shadow: 1px 1px 30px var(--light-blue);
+}
+                       /* --- Main Curriculum ---*/
+hr {
+    width: 80rem;
+    height: 0.2rem;
+    margin-bottom: 1rem;
+    background: var(--light-blue);
+    border: none;
+}
+.main__curriculum{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.personalia__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 80rem;
+    align-items: center;
+    margin: 0 10rem 0 auto;
+
+
+    /*border: 2px solid yellowgreen;*/
+}
+.main__curriculum h1{
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+.main__curriculum h2{
+    font-size: 2rem;
+    color: var(--light-blue);
+}
+.main__curriculum p {
+    font-size: 1.5rem;
+}
+.main__curriculum h3 {
+    font-size: 1.7rem;
+}
+.sct__personalia {
+    display: flex;
+    width: 80rem;
+    margin: 0 10rem 5rem auto;
+    /*border: 2px solid yellowgreen;*/
+}
+.perso__links {
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    align-items: center;
+}
+.perso__rechts {
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    align-items: center;
+}
+.sct__talen {
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    align-items: center;
+    margin: 0 10rem 0 auto;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.div__talen {
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    align-items: center;
+    margin: 3rem 10rem 3rem auto;
+    flex-wrap: wrap;
+    height: 6rem;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.div__balk-nl {
+    width: 15rem;
+    background: var(--off-white);
+    height: 1rem;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    z-index: 14;
+    margin: 0.3rem 0 0 0;
+}
+.div__balk-nl::before {
+    content: '';
+    position: absolute;
+    background: var(--light-blue);
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 4px rgba(255, 255, 255, 0.6), inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    width: 95%;
+    height: 100%;
+    z-index: 10;
+}
+.div__balk-en {
+    width: 15rem;
+    background: var(--off-white);
+    height: 1rem;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    z-index: 14;
+    margin: 0.3rem 0 0 0;
+}
+.div__balk-en::before {
+    content: '';
+    position: absolute;
+    background: var(--light-blue);
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 4px rgba(255, 255, 255, 0.6), inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    width: 90%;
+    height: 100%;
+    z-index: 10;
+}
+.div__balk-fr {
+    width: 15rem;
+    background: var(--off-white);
+    height: 1rem;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    z-index: 14;
+    margin: 0.3rem 0 0 0;
+}
+.div__balk-fr::before {
+    content: '';
+    position: absolute;
+    background: var(--light-blue);
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 4px rgba(255, 255, 255, 0.6), inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    width: 46%;
+    height: 100%;
+    z-index: 10;
+}
+.div__balk-it {
+    width: 15rem;
+    background: var(--off-white);
+    height: 1rem;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    z-index: 14;
+    margin: 0.3rem 0 0 0;
+}
+.div__balk-it::before {
+    content: '';
+    position: absolute;
+    background: var(--light-blue);
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 4px rgba(255, 255, 255, 0.6), inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    width: 38%;
+    height: 100%;
+    z-index: 10;
+}
+.sct__opleiding {
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    align-items: center;
+    margin: 3rem 10rem 3rem auto;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.opleiding-container {
+    display: flex;
+    flex-direction: column;
+    width: 60rem;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.opleiding-container div {
+    display: flex;
+    width: 60rem;
+    justify-content: space-between;
+    margin: 0.3rem;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.diploma {
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    align-items: center;
+    margin: 3rem 10rem 3rem auto;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.diploma-container {
+    display: flex;
+    flex-direction: column;
+    width: 60rem;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.diploma-container div {
+    display: flex;
+    width: 60rem;
+    justify-content: space-between;
+    margin: 0.3rem;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.certificaten {
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    align-items: center;
+    margin: 3rem 10rem 3rem auto;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.certificaten-container {
+    display: flex;
+    flex-direction: column;
+    width: 60rem;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.certificaten-container div {
+    display: flex;
+    width: 60rem;
+    justify-content: space-between;
+    margin: 0.3rem;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.sct__ervaring {
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    align-items: center;
+    margin: 0 10rem 0 auto;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.sct__ervaring table {
+    max-width: 100%;
+    caption-side: top;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    border-collapse: collapse;
+}
+.sct__ervaring thead tr th {
+    height: 4rem;
+    text-align: left;
+    /*border: 1px solid yellowgreen;*/
+
+}
+.sct__ervaring tbody td:nth-child(1) {
+    width: 12%;
+    font-size: 1rem;
+}
+.sct__ervaring tbody td:nth-child(2) {
+    width: 18%;
+    font-size: 1.1rem;
+}
+.sct__ervaring tbody td:nth-child(3) {
+    width: 20%;
+    font-size: 1.3rem;
+}
+.sct__ervaring tbody td:nth-child(4) {
+    width: 50%;
+    height: 10rem;
+    font-size: 1rem;
+}
+
+.sct__ervaring tbody tr:nth-child(odd) {
+    background: var(--dark);
+}
+.sct__ervaring tbody tr:nth-child(even) {
+    background: var(--dark-petrol);
+}
+.sct__skills {
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    align-items: center;
+    margin: 0 10rem 0 auto;
+
+    /*border: 2px solid yellowgreen;*/
+}
+.div__skill-container {
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 10rem;
+    margin: 3rem 0;
+    /*border: 2px solid yellowgreen;*/
+}
+.div__balk-word {
+    width: 15rem;
+    background: var(--off-white);
+    height: 1rem;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    z-index: 14;
+    margin: 0.3rem 0 1rem 0;
+}
+.div__balk-word::before {
+    content: '';
+    position: absolute;
+    background: var(--light-blue);
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 4px rgba(255, 255, 255, 0.6), inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    width: 40%;
+    height: 100%;
+    z-index: 10;
+}
+.div__balk-excel {
+    width: 15rem;
+    background: var(--off-white);
+    height: 1rem;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    z-index: 14;
+    margin: 0.3rem 0 1rem 0;
+}
+.div__balk-excel::before {
+    content: '';
+    position: absolute;
+    background: var(--light-blue);
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 4px rgba(255, 255, 255, 0.6), inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    width: 30%;
+    height: 100%;
+    z-index: 10;
+}
+.div__balk-ps {
+    width: 15rem;
+    background: var(--off-white);
+    height: 1rem;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    z-index: 14;
+    margin: 0.3rem 0 1rem 0;
+}
+.div__balk-ps::before {
+    content: '';
+    position: absolute;
+    background: var(--light-blue);
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 4px rgba(255, 255, 255, 0.6), inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    width: 60%;
+    height: 100%;
+    z-index: 10;
+}
+.div__balk-procreate {
+    width: 15rem;
+    background: var(--off-white);
+    height: 1rem;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    z-index: 14;
+    margin: 0.3rem 0 1rem 0;
+}
+.div__balk-procreate::before {
+    content: '';
+    position: absolute;
+    background: var(--light-blue);
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 4px rgba(255, 255, 255, 0.6), inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    width: 80%;
+    height: 100%;
+    z-index: 10;
+}
+.div__balk-sql {
+    width: 15rem;
+    background: var(--off-white);
+    height: 1rem;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    z-index: 14;
+    margin: 0.3rem 0 1rem 0;
+}
+.div__balk-sql::before {
+    content: '';
+    position: absolute;
+    background: var(--light-blue);
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 4px rgba(255, 255, 255, 0.6), inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    width: 20%;
+    height: 100%;
+    z-index: 10;
+}
+.div__balk-cs {
+    width: 15rem;
+    background: var(--off-white);
+    height: 1rem;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    z-index: 14;
+    margin: 0.3rem 0 1rem 0;
+}
+.div__balk-cs::before {
+    content: '';
+    position: absolute;
+    background: var(--light-blue);
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 4px rgba(255, 255, 255, 0.6), inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    width: 15%;
+    height: 100%;
+    z-index: 10;
+}
+.div__balk-html {
+    width: 15rem;
+    background: var(--off-white);
+    height: 1rem;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    z-index: 14;
+    margin: 0.3rem 0 1rem 0;
+}
+.div__balk-html::before {
+    content: '';
+    position: absolute;
+    background: var(--light-blue);
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 4px rgba(255, 255, 255, 0.6), inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    width: 35%;
+    height: 100%;
+    z-index: 10;
+}
+.div__balk-css {
+    width: 15rem;
+    background: var(--off-white);
+    height: 1rem;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    z-index: 14;
+    margin: 0.3rem 0 1rem 0;
+}
+.div__balk-css::before {
+    content: '';
+    position: absolute;
+    background: var(--light-blue);
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 4px rgba(255, 255, 255, 0.6), inset -5px -5px 10px rgba(94, 104, 121, 0.4);
+    width: 25%;
+    height: 100%;
+    z-index: 10;
+}
+.sct__interesses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80rem;
+    margin: 0 10rem 5rem auto;
+    align-items: center;
+    /*border: 2px solid yellowgreen;*/
+}
+.sct__interesses h1 {
+    font-size: 3em;
+}
+.sct__interesses ul {
+    list-style: none;
+    display: flex;
+    flex-flow: wrap column;
+    height: 19rem;
+}
+.sct__interesses ul li {
+    font-size: 1.6em;
+    padding: 0.7em;
+}
+.sct__interesses ul li i {
+    padding-right: 0.7em;
+}
+
+                        /*--- Logboek ---*/
+.sct__logboek {
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    align-items: center;
+    margin: 0 auto;
+    /*border: 2px solid yellowgreen;*/
+}
+.sct__logboek h1 {
+    font-size: 3rem;
+}
+.sct__logboek table {
+    max-width: 100%;
+    caption-side: top;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    border-collapse: collapse;
+}
+.sct__logboek thead tr th {
+    height: 3rem;
+    text-align: left;
+}
+.sct__logboek tbody td:nth-child(1) {
+    width: 10%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.sct__logboek tbody td:nth-child(2) {
+    width: 15%;
+    font-size: 1.1rem;
+}
+.sct__logboek tbody td:nth-child(3) {
+    width: 30%;
+    font-size: 1.2rem;
+}
+.sct__logboek tbody td:nth-child(4) {
+    width: 30%;
+    height: 8rem;
+    font-size: 1.2rem;
+}
+.sct__logboek tbody td:nth-child(5) {
+    width: 15%;
+    font-size: 1.1rem;
+
+}
+.sct__logboek tbody tr:nth-child(odd) {
+    background: var(--dark);
+}
+.sct__logboek tbody tr:nth-child(even) {
+    background: var(--dark-petrol);
+}
+.tbl__semester2 thead td:nth-child(5) {
+    text-align: left;
+}
+
+                                /*--- Ontwikkeling ---*/
+.main__ontwikkeling {
+    width: 80rem;
+    margin: 0 auto;
+}
+.div__title-ontwikkeling, .div__opleiding, .div__beroep{
+    margin: 1rem 0;
+}
+.div__title-ontwikkeling h1, .competenties h1, .competenties2 h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+.div__title-ontwikkeling h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+.main__ontwikkeling h3 {
+    font-size: 1.5rem;
+}
+.sct__ontwikkeling p{
+    font-size: 1.1rem;
+}
+.competenties p, .competenties2 p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.competenties h2, .competenties2 h2 {
+    font-size: 2.5rem;
+    color: var(--medium-blue);
+}
+.competenties h3 {
+    color: var(--medium-blue);
+}
+.competenties2 .semester {
+    margin: 0 auto;
+    color: var(--off-white);
+    text-align: center;
+}
+.semester {
+    text-decoration: underline;
+}
+
+                                /*--- Opdrachten ---*/
+.header__opdrachten {
+    margin: 0 auto 2rem auto;
+    text-align: center;
+    font-size: 3rem;
+}
+.main__opdrachten {
+    width: 80rem;
+    margin: 0 auto;
+}
+.main__opdrachten::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 90%;
+    background: var(--off-white);
+    top: 8%;
+    left: 50%;
+    margin-left: 20px;
+}
+.main__opdrachten h2 {
+    font-size: 2.5rem;
+}
+.main__opdrachten small {
+    font-size: 1.1rem;
+}
+.main__opdrachten h3 {
+    font-size: 1.7rem;
+    color: var(--medium-blue);
+}
+.main__opdrachten p {
+    font-size: 1.3rem;
+}
+.container-links {
+    position: relative;
+    left: 0;
+    border: 2px solid var(--light-blue);
+    border-radius: 15px;
+    width: 50%;
+    padding: 1rem;
+}
+.container-rechts {
+    margin: 1rem 3rem;
+    position: relative;
+    left: 50%;
+    border: 2px solid var(--light-blue);
+    border-radius: 15px;
+    width: 50%;
+    padding: 1rem;
+}
+.container-links img {
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -46px;
+    top: 120px;
+    z-index: 10;
+}
+.container-rechts img {
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    left: -46px;
+    top: 120px;
+    z-index: 10;
+}
+
+                                /*--- Reflectie ---*/
+.header__reflectie {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 auto;
+}
+
+.main__reflectie {
+    width: 80rem;
+    margin: 0 auto;
+}
+.deel1 {
+    margin: 3rem 0;
+}
+.inleiding h2 {
+    font-size: 2rem;
+    line-height: 45px;
+    margin-bottom: 0.5rem;
+}
+.inleiding p {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.vragen1 h2 {
+    font-size: 2rem;
+    line-height: 45px;
+    margin-bottom: 0.5rem;
+    color: var(--medium-blue);
+}
+.vragen1 p {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.deel2 {
+    margin: 5rem 0;
+}
+.deel2 h1 {
+    font-size: 3rem;
+    margin-bottom: 1.3rem;
+}
+.deel2 h2 , .div__eerste-reflectie h2 {
+    font-size: 2rem;
+    line-height: 45px;
+    margin-bottom: 0.5rem;
+}
+.deel2 h3 , .div__eerste-reflectie h3 {
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+    color: var(--medium-blue);
+}
+.deel2 p , .div__eerste-reflectie p {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.semester2 h4{
+    padding: 0.4rem;
+    color: var(--medium-blue);
+    font-size: 1.5rem;
+}
+                                /*--- Algemene Footer ---*/
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.5rem;
+    bottom: 0;
+
+
+    /*background-color: red;*/
+}
+footer .naam__klas{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-left: 2em;
+}
+footer .naam__klas p{
+    padding: 2rem;
+}
+footer .boven a{
+    padding: 1.8rem;
+    color: var(--off-white);
+    font-size: 1.3rem;
+    transition: all 0.3s;
+}
+footer .boven a:hover{
+    background-color: var(--medium-blue);
+    border-radius: 10px;
+    color: var(--dark-petrol);
+}
+
+
+
+
+
+
+                    /*--- Custom Scroll Bar voor alle pagina's---*/
+
+body::-webkit-scrollbar {
+    width: 1.2rem;
+}
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0 var(--bg-color);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--medium-blue);
+}
+body::-webkit-scrollbar-corner{
+    background-color: var(--dark-petrol);
+}
+
+                        /*--- Animation ---*/
+.slideInRight {
+    animation: slideInRight 1.3s ease-in-out 1, fadeIn 3s ease 1;
+}
+.slideInRight2 {
+    animation: slideInRight 2s ease-in-out 1, fadeIn 4s ease 1;
+}
+.slideInRight3 {
+    animation: slideInRight 3s ease-in-out 1, fadeIn 5s ease 1;
+}
+.slideInRight4 {
+    animation: slideInRight 3.2s ease-in-out 1, fadeIn 6s ease 1;
+}
+.slideInRight5 {
+    animation: slideInRight 3.5s ease-in-out 1, fadeIn 6s ease 1;
+}
+.slideInLeft {
+    animation: slideInLeft 2s ease-in-out 1;
+}
+
+                        /*--- Keyframes animation ---*/
+
+@keyframes showRight {
+    100% {
+        width: 3%;
+    }
+}
+@keyframes slideInRight {
+    from {
+        transform: translateX(1500px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-800px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+                                    /*--- Media Query Curriculum ---*/
+
+@media screen and (max-width: 1880px) {
+    .personalia__container {
+        max-width: 70rem;
+    }
+    .sct__personalia {
+        width: 70rem;
+        margin: 0 10rem 0 auto;
+    }
+    .sct__talen {
+        width: 70rem;
+    }
+    .sct__opleiding {
+        width: 70rem;
+    }
+    .opleiding-container {
+        width: 60rem;
+    }
+    .diploma {
+        width: 70rem;
+    }
+    .certificaten {
+        width: 70rem;
+    }
+    .div__talen {
+        width: 70rem;
+    }
+
+    .sct__ervaring {
+        width: 70rem;
+    }
+    .div__skill-container {
+        width: 70rem;
+    }
+    .sct__skills {
+        width: 70rem;
+    }
+    .sct__interesses {
+        width: 70rem;
+    }
+    hr {
+        width: 70rem;
+    }
+}
+@media screen and (max-width: 1800px) {
+    .personalia__container {
+        max-width: 60rem;
+    }
+    .sct__personalia {
+        width: 60rem;
+        margin: 0 10rem 0 auto;
+    }
+    .sct__talen {
+        width: 60rem;
+    }
+    .div__talen h3 {
+        font-size: 1.6rem;
+    }
+    .div__balk-nl {
+        width: 10rem;
+    }
+    .div__balk-nl::before {
+        width: 90%;
+    }
+    .div__balk-en {
+        width: 10rem;
+    }
+    .div__balk-en::before {
+        width: 85%;
+    }
+    .div__balk-fr {
+        width: 10rem;
+    }
+    .div__balk-fr::before {
+        width: 41%;
+    }
+    .div__balk-it {
+        width: 10rem;
+    }
+    .div__balk-it::before {
+        width: 33%;
+    }
+    .sct__opleiding {
+        width: 60rem;
+    }
+    .opleiding-container {
+        width: 50rem;
+    }
+    .opleiding-container div {
+        width: 50rem;
+    }
+    .diploma {
+        width: 60rem;
+    }
+    .certificaten {
+        width: 60rem;
+    }
+    .sct__ervaring {
+        width: 60rem;
+    }
+    .div__skill-container {
+        width: 60rem;
+    }
+    .sct__skills {
+        width: 60rem;
+    }
+    .sct__interesses {
+        width: 60rem;
+    }
+    .div__talen {
+        width: 60rem;
+    }
+    .div__skill-container h3 {
+        font-size: 1.6rem;
+    }
+    .div__balk-word {
+        width: 10rem;
+    }
+    .div__balk-word::before {
+        width: 35%;
+    }
+    .div__balk-excel {
+        width: 10rem;
+    }
+    .div__balk-excel::before {
+        width: 25%;
+    }
+    .div__balk-ps {
+        width: 10rem;
+    }
+    .div__balk-ps::before {
+        width: 55%;
+    }
+    .div__balk-procreate {
+        width: 10rem;
+    }
+    .div__balk-procreate::before {
+        width: 75%;
+    }
+    .div__balk-sql {
+        width: 10rem;
+    }
+    .div__balk-sql::before {
+        width: 15%;
+    }
+    .div__balk-cs {
+        width: 10rem;
+    }
+    .div__balk-cs::before {
+        width: 10%;
+    }
+    .div__balk-html {
+        width: 10rem;
+    }
+    .div__balk-html::before {
+        width: 30%;
+    }
+    .div__balk-css {
+        width: 10rem;
+    }
+    .div__balk-css::before {
+        width: 20%;
+    }
+    hr {
+        width: 60rem;
+    }
+}
+@media screen and (max-width: 1580px) {
+    .personalia__container {
+        max-width: 50rem;
+    }
+    .sct__personalia {
+        width: 50rem;
+    }
+    .sct__talen {
+        width: 50rem;
+    }
+    .sct__opleiding {
+        width: 50rem;
+    }
+    .opleiding-container div {
+        width: 50rem;
+    }
+    .opleiding-container {
+        width: 50rem;
+    }
+    .diploma {
+        width: 50rem;
+    }
+    .diploma-container {
+        width: 50rem;
+    }
+    .diploma-container h3 {
+        font-size: 1.5rem;
+    }
+    .diploma-container div {
+        width: 50rem;
+    }
+    .certificaten {
+        width: 50rem;
+    }
+    .certificaten-container {
+        width: 50rem;
+    }
+    .certificaten-container h3 {
+        font-size: 1.4rem;
+    }
+    .certificaten-container div {
+        width: 50rem;
+    }
+    .sct__ervaring {
+        width: 50rem;
+    }
+    .div__skill-container {
+        width: 50rem;
+    }
+    .sct__skills {
+        width: 50rem;
+    }
+    .sct__interesses {
+        width: 50rem;
+    }
+    .div__talen {
+        width: 50rem;
+    }
+    hr {
+        width: 50rem;
+    }
+}
+@media screen and (max-width: 1440px) {
+    .nav__container {
+        font-size: 1.7rem;
+    }
+    .personalia__container {
+        max-width: 45rem;
+    }
+    .sct__personalia {
+        width: 45rem;
+    }
+    .sct__talen {
+        width: 45rem;
+    }
+    .sct__opleiding {
+        width: 45rem;
+    }
+    .opleiding-container {
+        width: 45rem;
+    }
+    .opleiding-container div {
+        width: 45rem;
+    }
+    .diploma {
+        width: 45rem;
+    }
+    .diploma-container {
+        width: 45rem;
+    }
+    .diploma-container h3 {
+        font-size: 1.5rem;
+    }
+    .diploma-container div {
+        width: 45rem;
+    }
+    .certificaten {
+        width: 45rem;
+    }
+    .certificaten-container {
+        width: 45rem;
+    }
+    .certificaten-container h3 {
+        font-size: 1.4rem;
+    }
+    .certificaten-container div {
+        width: 45rem;
+    }
+    .sct__ervaring {
+        width: 45rem;
+    }
+    .div__skill-container {
+        width: 45rem;
+    }
+    .sct__skills {
+        width: 45rem;
+    }
+    .sct__interesses {
+        width: 45rem;
+    }
+    .div__talen {
+        width: 45rem;
+    }
+    hr {
+        width: 45rem;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+
+
+    .nav__container .logo img {
+        display: none;
+    }
+    .nav__container {
+        font-size: 1.8rem;
+        display: flex;
+        width: 100%;
+        margin: 2% auto 0 auto;
+    }
+    .nav__container .logo a {
+        color: var(--off-white);
+    }
+    .nav__container ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+        width: 100%;
+        list-style: none;
+    }
+    .nav__container ul li {
+        cursor: pointer;
+        position: static;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .nav__container ul li a {
+        color: var(--off-white);
+        transition: all 0.3s;
+        padding: 10px;
+        border-radius: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .nav__container ul li a:hover {
+        transform: none;
+    }
+    .div__menu{
+        display: none;
+        width: 100%;
+        position: relative;
+    }
+    .nav__container ul li:hover .div__menu {
+        display: none;
+        position: relative;
+        top: 1rem;
+        box-shadow: none;
+        background-color: var(--dark);
+    }
+    .div__menu ul {
+        display: block;
+        margin: 0 auto;
+    }
+    .div__menu ul li a {
+        display: block;
+    }
+    #portfolio-link {
+        display: flex;
+        justify-content: center;
+    }
+    #portfolio-link-li{
+        display: flex;
+        flex-direction: column;
+    }
+    .open{
+        display: flex !important;
+    }
+    .fa-chevron-down{
+        position: relative;
+        top: 0.5rem;
+        left: 0.3rem;
+    }
+    .sct__info {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem;
+        max-height: 42rem;
+        border: 1px solid var(--light-blue);
+        border-radius: 30px;
+        left: 0;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    hr {
+        width: 80%;
+        height: 0.2rem;
+        margin: 0 auto 1rem auto;
+        background: var(--light-blue);
+    }
+
+    .main__curriculum{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .personalia__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .main__curriculum h1{
+        font-size: 2.5rem;
+        margin: 1rem auto;
+    }
+    .main__curriculum h2{
+        font-size: 1.5rem;
+    }
+    .main__curriculum p {
+        font-size: 1.5rem;
+    }
+    .main__curriculum h3 {
+        font-size: 1.7rem;
+    }
+    .sct__personalia {
+
+        width: 100%;
+        margin: 0 auto;
+    }
+    .perso__links {
+        width: 100%;
+    }
+    .perso__rechts {
+        width: 100%;
+    }
+    .sct__talen {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .div__talen {
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        margin: 1rem auto 0.3rem;
+        height: 20rem;
+    }
+    .sct__opleiding{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .opleiding-container {
+        width: 100%;
+        align-items: center;
+
+    }
+    .opleiding-container div {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .diploma {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .diploma-container {
+        width: 100%;
+        align-items: center;
+    }
+    .diploma-container div {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .diploma h1 {
+        font-size: 2rem;
+    }
+    .diploma-container h3 {
+        font-size: 1.1rem;
+    }
+    .certificaten {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .certificaten-container {
+        width: 100%;
+        align-items: center;
+    }
+    .certificaten-container div {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .certificaten-container h3 {
+        font-size: 1.2rem;
+    }
+    .sct__ervaring thead {
+        display: none;
+    }
+    .sct__ervaring tr {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        margin: 1.2rem auto;
+        border-radius: 10px;
+        border: 1px solid var(--light-blue)
+    }
+    .sct__ervaring table td:nth-child(4) {
+        display: none;
+    }
+    .sct__ervaring tbody td:nth-child(1) {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    .sct__ervaring tbody td:nth-child(2) {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+    .sct__ervaring tbody td:nth-child(3) {
+        width: 100%;
+        font-size: 1.3rem;
+    }
+    .sct__ervaring tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .sct__ervaring tbody tr:nth-child(even) {
+        background: none;
+    }
+    .div__balk-nl {
+        margin: 0.8rem 0 0.5rem 0;
+    }
+
+    .div__balk-en {
+        margin: 0.8rem 0 0.5rem 0;
+    }
+
+    .div__balk-fr {
+        margin: 0.8rem 0 0.5rem 0;
+    }
+
+    .div__balk-it {
+        margin: 0.8rem 0 0.5rem 0;
+    }
+
+    .sct__ervaring {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .sct__skills {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .div__skill-container {
+        width: 100%;
+        flex-direction: column;
+        height: 40rem;
+        margin: 2rem auto;
+    }
+    .div__balk-word {
+        margin: 0.8rem 0 0.5rem 0;
+    }
+
+    .div__balk-excel {
+        margin: 0.8rem 0 0.5rem 0;
+    }
+
+    .div__balk-ps {
+        margin: 0.8rem 0 0.5rem 0;
+    }
+
+    .div__balk-procreate {
+        margin: 0.8rem 0 0.5rem 0;
+    }
+
+    .div__balk-sql {
+        margin: 0.8rem 0 0.5rem 0;
+    }
+
+    .div__balk-cs {
+        margin: 0.8rem 0 0.5rem 0;
+    }
+
+    .div__balk-html {
+        margin: 0.8rem 0 0.5rem 0;
+    }
+
+    .div__balk-css {
+        margin: 0.8rem 0 0.5rem 0;
+    }
+
+    .sct__interesses {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .sct__interesses ul {
+        align-items: center;
+        flex-direction: column;
+        height: 28rem;
+    }
+    .sct__interesses ul li {
+        font-size: 1.3em;
+        padding: 0.7rem 0;
+    }
+
+    footer {
+        border-top: 1px solid var(--light-blue);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: normal;
+        align-items: center;
+        padding: 0;
+
+    }
+    footer .naam__klas{
+        display: flex;
+        flex-direction: column;
+        justify-content: normal;
+        align-items: center;
+        padding-left: 0;
+        margin: 1rem auto 0.3rem auto;
+    }
+    footer .naam__klas p{
+        padding: 0.2rem;
+    }
+    footer .opdracht {
+        margin: 0.3rem auto 1.5rem auto;
+        font-size: 1.2rem;
+    }
+    footer .boven a{
+        padding: 1.4rem;
+        color: var(--off-white);
+        font-size: 1.3rem;
+        transition: all 0.3s;
+        margin: 1.5rem auto;
+    }
+    footer .boven a:hover{
+        background-color: var(--medium-blue);
+        border-radius: 10px;
+        color: var(--dark-petrol);
+    }
+}
+
+@media screen and (max-width: 735px) {
+
+    .personalia__container {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .sct__personalia {
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}
+@media screen and (max-width: 480px) {
+    body::before {
+        display: none;
+    }
+}
